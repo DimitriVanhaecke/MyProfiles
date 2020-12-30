@@ -1,10 +1,36 @@
 ﻿@page "/"
-<div>
-    <center>
-        <h1>Hello world !</h1>
-        <img src="../Images/Profile.JPG" asp-append-version="true" class="rounded-circle" />
-        <h2>i'm Dimitri Vanhaecke</h2>
-        <hr>
-        <h3>.Net software developer - Ghent, Belgium</h3>
-    </center>
+<div class="jumbotron text-center ">
+    <div class="col">
+
+        <center>
+            <h1 class="display-1">Hello world !</h1>
+            <img src="/../images/Profile.JPG" class="rounded-circle" />
+            <h2>i'm Dimitri Vanhaecke</h2>
+
+            <h3>.Net software developer - Ghent, Belgium</h3>
+        </center>
+    </div>
 </div>
+<center>
+    <h2>About me</h2>
+</center>
+<div class="row">
+
+    <div class="col">
+        <h5>I have @CurrentExp + years of experience as a software engineer</h5>
+    </div>
+    <div class="col">
+        <h5>Projects</h5>
+    </div>
+</div>
+@code
+{
+
+    private int CurrentExp { get; set; }
+    public Index()
+    {
+        CurrentExp = DateTime.Now.Year - new DateTime(2018, 06, 19).Year;
+
+    }
+
+}

@@ -1,35 +1,67 @@
 ﻿@page "/"
-<div class="jumbotron text-center ">
+
+<div class="row ">
     <div class="col">
 
         <center>
             <h1 class="display-1">Hello world !</h1>
             <img src="Images/Profile.JPG" class="rounded-circle" />
             <h2>i'm Dimitri Vanhaecke</h2>
-
             <h3>.Net software developer - Ghent, Belgium</h3>
+            <SocialMedia></SocialMedia>
         </center>
     </div>
 </div>
-<center>
-    <h2>About me</h2>
-</center>
-<div class="row">
 
+<div class="row">
     <div class="col">
+        <h2>About me</h2>
         <h5>I have @CurrentExp + years of experience as a software engineer</h5>
     </div>
+</div>
+<div class="row">
     <div class="col">
-        <h5>Projects</h5>
+        <h2>Projects</h2>
     </div>
 </div>
+<div class="row">
+    <div class="col">
+        <h2>Contact</h2>
+        <EditForm Model="@Message" OnSubmit=@FormSubmitted>
+
+            <div class="form-group">
+                <label for="txtName">Name</label>
+                <InputText @bind-Value=Message.Name type="text" id="txtName" class="form-control" placeholder="Enter Name" />
+            </div>
+            <div class="form-group">
+                <label for="txtEmail">Email address</label>
+                <InputText @bind-Value=Message.Email type="email" id="txtEmail" class="form-control" placeholder="Enter email" />
+            </div>
+            <div class="form-group">
+                <label for="txtTextArea">Message</label>
+                <InputTextArea @bind-Value=Message.TextMessage id="txtTextArea" class="form-control" rows="10" placeholder="Message" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </EditForm>
+    </div>
+</div>
+
 @code
 {
+    public Message Message { get; set; }
 
     private int CurrentExp { get; set; }
     public Index()
     {
+        Message = new Message();
+
         CurrentExp = DateTime.Now.Year - new DateTime(2018, 06, 19).Year;
+
+    }
+
+    public void FormSubmitted()
+    {
 
     }
 

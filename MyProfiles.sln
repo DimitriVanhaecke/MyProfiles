@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProfiles", "MyProfiles.csproj", "{BEC640D2-F00C-406F-9092-06FAEF811092}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProfiles", "MyProfiles.csproj", "{BEC640D2-F00C-406F-9092-06FAEF811092}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedModels", "..\SharedModels\SharedModels.csproj", "{AEB428DB-FDF7-42C2-A52F-B5DD520505B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BEC640D2-F00C-406F-9092-06FAEF811092}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEC640D2-F00C-406F-9092-06FAEF811092}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEC640D2-F00C-406F-9092-06FAEF811092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB428DB-FDF7-42C2-A52F-B5DD520505B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB428DB-FDF7-42C2-A52F-B5DD520505B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB428DB-FDF7-42C2-A52F-B5DD520505B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB428DB-FDF7-42C2-A52F-B5DD520505B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -25,6 +25,8 @@
 </div>
 <div class="row">
     <div class="col">
+    </div>
+    <div class="col">
         <h2>Contact</h2>
         <EditForm Model="@Message" OnSubmit=@FormSubmitted>
 
@@ -44,18 +46,20 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </EditForm>
     </div>
+    <div class="col">
+    </div>
 </div>
 
 @code
 {
     public Message Message { get; set; }
 
-    private int CurrentExp { get; set; }
+    private double CurrentExp { get; set; }
     public Index()
     {
         Message = new Message();
 
-        CurrentExp = DateTime.Now.Year - new DateTime(2018, 06, 19).Year;
+        CurrentExp = Math.Floor((DateTime.Now - new DateTime(2018, 06, 19)).TotalDays / 365);
 
     }
 

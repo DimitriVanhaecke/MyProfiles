@@ -1,29 +1,46 @@
 ﻿@page "/"
 
-<div class="row ">
+<div class="row vh-100">
     <div class="col">
-
         <center>
             <h1 class="display-1">Hello world !</h1>
             <img src="Images/Profile.JPG" class="rounded-circle" />
             <h2>i'm Dimitri Vanhaecke</h2>
             <h3>.Net software developer - Ghent, Belgium</h3>
+            <SocialMedia />
         </center>
     </div>
 </div>
 
-<div class="row">
-    <div class="col">
+<div class="row vh-100" id="About">
+
+    <div class="col h-50 w-50">
         <h2>About me</h2>
-        <h5>I have @CurrentExp + years of experience as a software engineer</h5>
+        <h5>
+            I have @CurrentExp + years of experience as a software engineer,
+            i love to build mobile apps, business applications and websites
+        </h5>
+    </div>
+    <div class="col h-50 w-50">
+        <h2>Technical skills</h2>
+        <div class="row">
+            <div class="col">
+                <h4>C#</h4>
+            </div>
+            <div class="col">
+                <h4>WPF</h4>
+            </div>
+            <div class="col">
+                <h4>Xamarin Forms</h4>
+            </div>
+            <div class="col">
+                <h4>Blazor</h4>
+            </div>
+        </div>
     </div>
 </div>
-<div class="row">
-    <div class="col">
-        <h2>Projects</h2>
-    </div>
-</div>
-<div class="row">
+
+<div class="row vh-100">
     <div class="col">
     </div>
     <div class="col">

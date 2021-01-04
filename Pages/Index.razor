@@ -12,57 +12,88 @@
     </div>
 </div>
 
-<div class="row vh-100" id="About">
-
-    <div class="col h-50 w-50">
-        <h2>About me</h2>
-        <h5>
-            I have @CurrentExp + years of experience as a software engineer,
-            i love to build mobile apps, business applications and websites
-        </h5>
-    </div>
-    <div class="col h-50 w-50">
-        <h2>Technical skills</h2>
-        <div class="row">
-            <div class="col">
-                <h4>C#</h4>
-            </div>
-            <div class="col">
-                <h4>WPF</h4>
-            </div>
-            <div class="col">
-                <h4>Xamarin Forms</h4>
-            </div>
-            <div class="col">
-                <h4>Blazor</h4>
-            </div>
+<div class="card-columns">
+    <div class="card text-white bg-dark mb-3">
+        <div class="card-body">
+            <h5 class="card-title">About</h5>
+            <p class="card-text">
+                I have @CurrentExp + years of experience as a software engineer,
+                i love to build mobile apps, business applications and websites
+            </p>
         </div>
     </div>
-</div>
+    <div class="card">
+        <div class="card-header">
+            Current job
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">.Net developer</h5>
+            <p class="card-text">
+                Victor Buyck Steel Construction
+            </p>
+            <p class="card-text"><small class="text-muted">June 2018 - Present</small></p>
+        </div>
+    </div>
 
-<div class="row vh-100">
+    <div class="card">
+        <div class="card-header">
+            .Net development
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Technical skills</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">C#</li>
+            <li class="list-group-item">WPF</li>
+            <li class="list-group-item">Xamarin.Forms</li>
+            <li class="list-group-item">UWP</li>
+            <li class="list-group-item">Blazor</li>
+        </ul>
+    </div>
+    <div class="card p-3">
+        <blockquote class="blockquote mb-0 card-body">
+            <p>"Don't write better error messages, write code that doesn't need them." </p>
+            <footer class="blockquote-footer">
+                <small class="text-muted">
+                    quote <cite title="Source Title">- Jason C. McDonald</cite>
+                </small>
+            </footer>
+        </blockquote>
+    </div>
 
-    <div class="col">
-        <h2>Contact</h2>
-        <EditForm Model="@Message" OnSubmit=@FormSubmitted>
+    <div class="card">
+        <div class="card-header">
+            Education
+        </div>
 
-            <div class="form-group">
-                <label for="txtName">Name</label>
-                <InputText @bind-Value=Message.Name type="text" id="txtName" class="form-control" placeholder="Enter Name" />
-            </div>
-            <div class="form-group">
-                <label for="txtEmail">Email address</label>
-                <InputText @bind-Value=Message.Email type="email" id="txtEmail" class="form-control" placeholder="Enter email" />
-            </div>
-            <div class="form-group">
-                <label for="txtTextArea">Message</label>
-                <InputTextArea @bind-Value=Message.TextMessage id="txtTextArea" class="form-control" rows="10" placeholder="Message" />
-            </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </EditForm>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Erasmus hogeschool 1 year specialisation - Business IT </li>
+            <li class="list-group-item">IVO Brugge - Graduate Applied Computer Science - Programming</li>
+            <li class="list-group-item">CVO Brugge - A2 Office management communication </li>
+        </ul>
     </div>
 </div>
+
+@*<div class="row">
+        <div class="col">
+            <h2>Contact</h2>
+            <EditForm Model="@Message" OnSubmit=@FormSubmitted>
+                <div class="form-group">
+                    <label for="txtName">Name</label>
+                    <InputText @bind-Value=Message.Name type="text" id="txtName" class="form-control" placeholder="Enter Name" />
+                </div>
+                <div class="form-group">
+                    <label for="txtEmail">Email address</label>
+                    <InputText @bind-Value=Message.Email type="email" id="txtEmail" class="form-control" placeholder="Enter email" />
+                </div>
+                <div class="form-group">
+                    <label for="txtTextArea">Message</label>
+                    <InputTextArea @bind-Value=Message.TextMessage id="txtTextArea" class="form-control" rows="10" placeholder="Message" />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </EditForm>
+        </div>
+    </div>*@
 
 @code
 {

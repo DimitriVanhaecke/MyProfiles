@@ -1,10 +1,8 @@
-using AspNetMonsters.Blazor.Geolocation;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using SendGrid;
-using SendGrid.Helpers.Mail;
+
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -20,7 +18,7 @@ namespace MyProfiles
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
             builder.RootComponents.Add<App>("app");
-            builder.Services.AddSingleton<LocationService>();
+
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             await builder.Build().RunAsync();

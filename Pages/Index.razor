@@ -1,6 +1,4 @@
 ﻿@page "/"
-@using AspNetMonsters.Blazor.Geolocation
-@inject LocationService  LocationService
 
 <div class="row min-vh-100">
     <div class="col">
@@ -98,8 +96,6 @@
     public Message Message { get; set; }
 
     private double CurrentExp { get; set; }
-
-    Location location;
 
     public Index()
     {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SendGrid;
+using SendGrid.Helpers.Mail;
+using System;
 using System.Collections.Specialized;
 using System.Net;
 using System.Net.Mail;
@@ -12,5 +14,16 @@ namespace MyProfiles
         public string Name { get; set; }
         public string Email { get; set; }
         public string TextMessage { get; set; }
+
+        public async Task Send()
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }

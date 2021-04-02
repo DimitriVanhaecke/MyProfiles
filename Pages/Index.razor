@@ -1,4 +1,6 @@
 ﻿@page "/"
+@using AspNetMonsters.Blazor.Geolocation
+@inject LocationService  LocationService
 
 <div class="row min-vh-100">
     <div class="col">
@@ -75,7 +77,8 @@
         <div class="card-body">
             <h5 class="card-title">Corona customers check in app</h5>
             <p class="card-text">Free app for android to register customers in shop, restaurant, ...</p>
-            <a href="https://install.appcenter.ms/users/Jedi-Dimitri/apps/HRCTracing/releases/22" target="_blank" class="btn btn-primary">Download link</a>
+            <a href="https://install.appcenter.ms/users/jedi-dimitri/apps/hrctracing/distribution_groups/public"
+               target="_blank" class="btn btn-primary">Download link</a>
         </div>
     </div>
 
@@ -85,51 +88,27 @@
             Mens sana in corpore sano
         </div>
         <div class="card-body">
-
-            <iframe frameborder='0' height="300" allowtransparency='true' scrolling='no'
+            <iframe frameborder='0' height="320" allowtransparency='true' scrolling='no'
                     src='https://www.strava.com/athletes/23297796/latest-rides/e893a1a2bb68c08bf8d0ba28c2c061b3d60396c7'>
             </iframe>
         </div>
     </div>
 </div>
 
-@*<div class="row">
-        <div class="col">
-            <h2>Contact</h2>
-            <EditForm Model="@Message" OnSubmit=@FormSubmitted>
-                <div class="form-group">
-                    <label for="txtName">Name</label>
-                    <InputText @bind-Value=Message.Name type="text" id="txtName" class="form-control" placeholder="Enter Name" />
-                </div>
-                <div class="form-group">
-                    <label for="txtEmail">Email address</label>
-                    <InputText @bind-Value=Message.Email type="email" id="txtEmail" class="form-control" placeholder="Enter email" />
-                </div>
-                <div class="form-group">
-                    <label for="txtTextArea">Message</label>
-                    <InputTextArea @bind-Value=Message.TextMessage id="txtTextArea" class="form-control" rows="10" placeholder="Message" />
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </EditForm>
-        </div>
-    </div>*@
-
 @code
 {
     public Message Message { get; set; }
 
     private double CurrentExp { get; set; }
+
+    Location location;
+
     public Index()
     {
         Message = new Message();
 
         CurrentExp = Math.Floor((DateTime.Now - new DateTime(2018, 06, 19)).TotalDays / 365);
 
-    }
-
-    public async void FormSubmitted()
-    {
-        await Message.Send();
     }
 
 }

@@ -14,16 +14,5 @@ namespace MyProfiles
         public string Name { get; set; }
         public string Email { get; set; }
         public string TextMessage { get; set; }
-
-        public async Task Send()
-        {
-            try
-            {
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
     }
 }

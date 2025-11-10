@@ -2,7 +2,7 @@
 <!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\dimitri.vanhaecke\source\repos\DimitriVanhaecke\DimitriVanhaecke\bin\Release\net8.0\browser-wasm\publish\</_PublishTargetUrl>
+    <_PublishTargetUrl>bin\Release\net8.0\browser-wasm\publish\</_PublishTargetUrl>
     <History>True|2025-11-10T09:38:56.2002182Z||;</History>
     <LastFailureDetails />
   </PropertyGroup>

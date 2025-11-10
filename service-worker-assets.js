@@ -33,7 +33,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-kPjdSYh6nMaibDIR2yFFlx2N7+\/bZMqwUdafiJneFeU=",
+      "hash": "sha256-i0D30iXCeYk9oi6iX2\/sMHJWf6oKRgLZ5FfQXhp0JOo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -93,7 +93,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-Aqu\/4YhRCMSOdnCre1XdvHOGUKATjOO1FqyOA1Hw1I4=",
+      "hash": "sha256-rbn8lnDnUJCJRqFxZW5\/ubGBbHHlDH275j6qu37PtO4=",
       "url": "_framework\/MyProfiles.wasm"
     },
     {
@@ -205,5 +205,5 @@
       "url": "manifest.webmanifest"
     }
   ],
-  "version": "Scb5k2rg"
+  "version": "njsiK8QI"
 };

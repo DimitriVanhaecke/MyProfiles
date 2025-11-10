@@ -33,7 +33,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-i0D30iXCeYk9oi6iX2\/sMHJWf6oKRgLZ5FfQXhp0JOo=",
+      "hash": "sha256-RDObuW6ITR64OrmRGeudsT9cQxB4obUUTRw03vNy1jA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -93,7 +93,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-rbn8lnDnUJCJRqFxZW5\/ubGBbHHlDH275j6qu37PtO4=",
+      "hash": "sha256-mlkVr6gon5Ef6lXDb8\/vuLufiFBegK008ghTIGsHe2o=",
       "url": "_framework\/MyProfiles.wasm"
     },
     {
@@ -186,15 +186,15 @@
     },
     {
       "hash": "sha256-F3Xqzy1tjiE8Z72rrIy9Lz+dkNiLYkstf+neU5otvR4=",
-      "url": "Images\/code.jpg"
+      "url": "images\/code.jpg"
     },
     {
       "hash": "sha256-7AAKRDIpfGMA3he+VTeuv\/FvXifhCiX4m1sw00A6ZJo=",
-      "url": "Images\/Profile.JPG"
+      "url": "images\/profilie.jpg"
     },
     {
       "hash": "sha256-xbk+J2UCzQjuIYc2pw545516ftGv528UBz9tNq4Ia0g=",
-      "url": "Images\/regappShop.png"
+      "url": "images\/regappshop.png"
     },
     {
       "hash": "sha256-47Sq5hs2hVIB5pu8V+1nmTlFvvPvuwyXgKnE4BdeSzM=",
@@ -205,5 +205,5 @@
       "url": "manifest.webmanifest"
     }
   ],
-  "version": "njsiK8QI"
+  "version": "M2bSVnxP"
 };

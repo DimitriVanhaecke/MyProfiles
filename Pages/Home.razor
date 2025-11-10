@@ -1,69 +1,68 @@
 ﻿@page "/"
 
-@* PSEUDOCODE PLAN
-1. Extract greeting/introduction block from first column.
-2. Place greeting block in its own full-width row (col-12) above main grid.
-3. Keep second row as three columns (col-12 col-md-4) for original column content minus greeting.
-4. Column 1 now only holds About card.
-5. Columns 2 and 3 remain unchanged.
-6. Preserve CurrentExp logic and bindings.
-*@
+<style>
+    .list-group-bullets .list-group-item {
+        list-style-type: disc;
+        display: list-item;
+    }
+</style>
 
 <!-- Full-width introduction row -->
 <div class="row">
-    <div class="col-12">
-        <div class="text-center mb-4">
-            <h1 class="display-4">Hello world!</h1>
-            <img src="/images/profiles.jpg" class="rounded-circle img-fluid mb-3" style="max-width:180px" alt="Profile" />
-            <h2>I'm Dimitri Vanhaecke</h2>
-            <h3>.NET Software Developer</h3>
-            <h4>Ghent, Belgium</h4>
-            <SocialMedia />
-        </div>
-    </div>  
+ <div class="col-12">
+ <div class="text-center mb-4">
+ <h1 class="display-4">Hello world!</h1>
+ <img src="/images/profiles.jpg" class="rounded-circle img-fluid mb-3" style="max-width:180px" alt="Profile" />
+ <h2>I'm Dimitri Vanhaecke</h2>
+ <h3>IT Manager & .NET Software Developer</h3>
+ <h4>Ghent, Belgium</h4>
+ <SocialMedia />
+ </div>
+ </div> 
 </div>
 
 <!-- Three-column content row -->
 <div class="row g-4">
-    <!-- Column 1 -->
-    <div class="col-12 col-md-4">
-        <div class="card text-white bg-dark mb-3">
-            <div class="card-body">
-                <h5 class="card-title">About</h5>
-                <p class="card-text">
-                    I have @CurrentExp+ years of experience as a software engineer,
-                    I love to build mobile apps, business applications and websites.
-                </p>
-            </div>
-        </div>
+ <!-- Column1 -->
+ <div class="col-12 col-md-4">
+ <div class="card text-white bg-dark mb-3">
+ <div class="card-body">
+ <h5 class="card-title">About</h5>
+ <p class="card-text">
+ I worked 7 years as a software developer / engineer, recently i have moved to an IT manager role where now i have @ManagerExperienceText of experience.
+ </p>
+ </div>
+ </div>
+ <div class="card mb-3">
+ <div class="card-header">
+ Current Job / Role
+ </div>
+ <div class="card-body">
+ <h5 class="card-title">IT Manager</h5>
+ <p class="card-text">
+ Victor Buyck Steel Construction
+ </p>
+
+ <p class="card-text"><small class="text-muted">IT Manager (june 2025 - Present) </small></p>
+ 
+ </div>
+ </div>
+
+
         <div class="card mb-3">
             <div class="card-header">
-                Current Job
+                Previous Job / Role
             </div>
             <div class="card-body">
                 <h5 class="card-title">.NET Developer</h5>
                 <p class="card-text">
                     Victor Buyck Steel Construction
                 </p>
-                <p class="card-text"><small class="text-muted">June 2018 - Present</small></p>
+                
+                <p class="card-text"><small class="text-muted">.NET Developer (June 2018 - june 2025)</small></p>
+
             </div>
         </div>
-        <div class="card mb-3 p-3">
-            <header class="h5">Personal Projects</header>
-            <img class="card-img-bottom mb-2" src="images/regappshop.png" alt="Registration app" style="max-width:140px;height:auto;" />
-            <div class="card-body p-0">
-                <h5 class="card-title">Corona Customers Check-In App</h5>
-                <p class="card-text">Free Android app to register customers in shop, restaurant, ...</p>
-                <a href="https://install.appcenter.ms/users/jedi-dimitri/apps/hrctracing/distribution_groups/public"
-                   target="_blank" class="btn btn-primary btn-sm">Download link</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Column 2 -->
-    <div class="col-12 col-md-4">
-       
-
         <div class="card mb-3">
             <div class="card-header">
                 .NET Development
@@ -80,46 +79,110 @@
             </ul>
         </div>
 
-        <div class="card mb-3">
-            <div class="card-header">
-                Education
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Erasmus Hogeschool - 1 Year Specialisation Business IT</li>
-                <li class="list-group-item">IVO Brugge - Graduate Applied Computer Science - Programming</li>
-                <li class="list-group-item">CVO Brugge - A2 Office Management Communication</li>
-            </ul>
-        </div>
-    </div>
+ 
+ </div>
 
-    <!-- Column 3 -->
-    <div class="col-12 col-md-4">
+ <!-- Column2 -->
+ <div class="col-12 col-md-4">
+
+
+ <!-- New IT Management Skills card -->
+ <div class="card mb-3">
+ <div class="card-header">IT Management</div>
+ <div class="card-body">
+ <h5 class="card-title">Management & Leadership Skills</h5>
+ </div>
+ <ul class="list-group list-group-flush">
+ <li class="list-group-item">Team Leadership</li>   
+ <li class="list-group-item">IT Strategy & Roadmapping</li>
+ <li class="list-group-item">Project & Portfolio Management (Agile)</li>
+ <li class="list-group-item">Budget & Vendor Management</li>
+ <li class="list-group-item">Security & Risk Awareness</li>
+ <li class="list-group-item">Process Improvement / ITIL</li>
+ <li class="list-group-item">Cloud & DevOps Alignment</li>
+ <li class="list-group-item">Stakeholder Communication</li>
+ </ul>
+ </div>
+
+ 
+
+ <div class="card mb-3">
+ <div class="card-header">
+ Education
+ </div>
+ <ul class="list-group list-group-flush">
+ <li class="list-group-item">Erasmus Hogeschool -1 Year Specialisation Business IT</li>
+ <li class="list-group-item">IVO Brugge - Graduate Applied Computer Science - Programming</li>
+ <li class="list-group-item">CVO Brugge - A2 Office Management Communication</li>
+ </ul>
+ </div>
+
         <div class="card mb-3 p-3">
-            <img class="card-img" src="/images/code.jpg" alt="Code themed image">
-        </div>
-
-       
-
-        <div class="card mb-3">
-            <div class="card-header">
-                Mens sana in corpore sano
-            </div>
-            <div class="card-body">
-                <iframe frameborder="0" height="320" allowtransparency="true" scrolling="no"
-                        style="width:100%"
-                        src="https://www.strava.com/athletes/23297796/latest-rides/e893a1a2bb68c08bf8d0ba28c2c061b3d60396c7">
-                </iframe>
+            <header class="h5">Personal Projects</header>
+            <img class="card-img-bottom mb-2" src="images/regappshop.png" alt="Registration app" style="max-width:140px;height:auto;" />
+            <div class="card-body p-0">
+                <h5 class="card-title">Corona Customers Check-In App</h5>
+                <p class="card-text">Free Android app to register customers in shop, restaurant, ...</p>
+                <a href="https://install.appcenter.ms/users/jedi-dimitri/apps/hrctracing/distribution_groups/public"
+                   target="_blank" class="btn btn-primary btn-sm">Download link</a>
             </div>
         </div>
-    </div>
+ </div>
+
+
+
+ <!-- Column3 -->
+ <div class="col-12 col-md-4">
+ <div class="card mb-3 p-3">
+ <img class="card-img" src="/images/code.jpg" alt="Code themed image">
+ </div>
+        
+ 
+
+ <div class="card mb-3">
+ <div class="card-header">
+ Hobbies
+ </div>
+ <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Padel</li>
+                    <li class="list-group-item">Fietsen</li>
+                </ul>
+ </div>
+ </div>
+ </div>
 </div>
 
 @code
 {
     private double CurrentExp { get; set; }
+    private string ManagerExperienceText { get; set; }
 
     public Home()
     {
-        CurrentExp = Math.Floor((DateTime.Now - new DateTime(2018, 06, 19)).TotalDays / 365);
+        CurrentExp = Math.Floor((DateTime.Now - new DateTime(2018,06,19)).TotalDays /365);
+       
+        var managerStart = new DateTime(2025, 06, 19);
+        var now = DateTime.Now;
+
+        var ManagerExp = Math.Floor((now - managerStart).TotalDays / 365);
+
+        int months = ((now.Year - managerStart.Year) * 12) + (now.Month - managerStart.Month);
+        if (now.Day < managerStart.Day)
+        {
+            months--;
+        }
+
+        if (months < 12)
+        {
+            if (months <= 0)
+                ManagerExperienceText = "less than 1 month";
+            else
+                ManagerExperienceText = $"{months} month{(months == 1 ? "" : "s")}";
+        }
+        else
+        {
+            ManagerExperienceText = $"{ManagerExp} year{(ManagerExp == 1 ? "" : "s")}";
+        }
     }
 }
